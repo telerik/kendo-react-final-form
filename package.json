@@ -8,6 +8,8 @@
     "@progress/kendo-react-inputs": "^0.5.1",
     "@progress/kendo-react-intl": "^0.5.1",
     "@progress/kendo-theme-default": "^2.50.0",
+    "prop-types": "^15.6.1",
+    "cldr-data": "^32.0.1",
     "final-form": "^4.4.0",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
