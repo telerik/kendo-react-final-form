@@ -65,14 +65,15 @@ const initialValues = {
 
 const kendoHOC = (type, {input, meta, label, ...rest}) => {
     const Type = type;
-    return <label className="k-form-field">
+    const LabelElement = type !== DropDownList ? 'label' : 'span';
+    return <LabelElement className="k-form-field">
         <span>{label}</span>
         <Type
             {...input}
             {...rest}
         />
         {meta.error && meta.touched && <span className="k-required">{meta.error}</span>}
-    </label>;
+    </LabelElement>;
 };
 const KendoInput = (options) => (kendoHOC(Input, options))
 const KendoNumericTextBox = (options) => (kendoHOC(NumericTextBox, options))
