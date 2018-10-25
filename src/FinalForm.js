@@ -66,6 +66,9 @@ const initialValues = {
 const kendoHOC = (type, {input, meta, label, ...rest}) => {
     const Type = type;
     const LabelElement = type !== DropDownList ? 'label' : 'span';
+    if (type === NumericTextBox && input.value === '') {
+        input.value = null;
+    }
     return <LabelElement className="k-form-field">
         <span>{label}</span>
         <Type
